@@ -19,15 +19,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Cuestionario Diario</title>
     </head>
     <body>
     <header> 
         <h1>SMOKELESS</h1>
         <div class="contenido-header">
-        <a href="menu.html" id="menu">MENU</a>
-        <a href="proyecciones.html" id="pro">PROYECTAR</a>
-        <a href="recomendaciones.html" id="rec">RECOMENDACIONES</a>
+        <a href="menuinicial.jsp" id="menu">MENU</a>
+        <a href="https://smokelesspy.herokuapp.com/home/<%=session.getAttribute("id")%>">PROYECTAR</a>
         <a href="login.html"></a></div></header>
         
         <%
@@ -70,7 +69,9 @@
                    
                   
                     %>
-        <h1>Registro Exitoso</h1>            
+         <div class="content">
+                    <h1>Registro Exitoso</h1> 
+                    </div>           
                     <%
                        
                         if(idS!=null)

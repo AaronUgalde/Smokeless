@@ -1,5 +1,5 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*, java.text.*, encapsulamiento.Logueo,  encapsulamiento.ConexionDB" %>
 
+<%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*, java.text.*, encapsulamiento.Logueo,  encapsulamiento.ConexionDB" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -50,8 +50,7 @@
                             rs1 = set.executeQuery(q1);
                             
                             String idS = String.valueOf(session.getAttribute("id")); 
-                            String id = String.valueOf(session.getAttribute("id"));
-                            Cookie miCookie = new Cookie ("id",id); 
+                            Cookie miCookie = new Cookie ("id", String.valueOf(session.getAttribute("id")));
                             miCookie.setMaxAge(120);
                             response.addCookie(miCookie);
                        
@@ -63,6 +62,7 @@
                                 else   
                                 {  
                                     
+                                   
 
                                     response.sendRedirect("cuestionario.html"); 
                                      

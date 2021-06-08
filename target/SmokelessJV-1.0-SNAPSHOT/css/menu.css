@@ -7,22 +7,25 @@ header{
 
     background-image: url(./Grafico/Fondo.png);
     color: rgb(255, 255, 255);
-	background-size: cover;
-    
-	height: 110px;
-    
-
-	width: 100%;
+    background-size: cover;
+    height: 120px;
+    width: 100%;
     position:static;
 
     background-repeat: no-repeat;
-}
-.contenido-header{
-    padding-top: .8rem;
+    transform: translate(0%,-30%);
+    padding-top: 3rem;
     padding-left: 1.5rem;
     font-size: 90%;
     font-weight: bold;
     letter-spacing: 5px;
+}
+.contenido-header{
+    transform: translate(-10%,-150%);
+    text-align: right;
+    word-spacing: 2.8rem;
+    font-weight: 100000;
+    
 }
 .container{
     padding-top: 10rem;
@@ -41,16 +44,62 @@ footer{
 .menu{
     justify-content: center;
     align-items: center;
+    align-content: center;
     text-align: center;
     padding: 1rem;
-    margin-left: 35rem;
+    margin-left: 30rem;
     background-color: #D49CFF;
-    width: max-content;
+    width: 550px;
     height: 500px;
     border-radius: 5%;
 }
+#m{
+    color: #fcf7f6;
+    font-weight: bolder;
+}
 
-a{
+#sc, #d, #cd, #hp{
     text-decoration: none;
     color: #ffffff;
+}
+
+#f1, #f2{
+    text-decoration: none;
+    color: #14746f;
+}
+#d{
+    padding-right: 5rem;
+    padding-left: 0;
+}
+#cd{
+    padding-right: 7rem;
+    padding-left: 0;
+}
+#hp{
+    padding-right: 20rem;
+    padding-left: 0;
+}
+h1{
+    transform: translate(0%,50%)
+}
+
+#u{
+    float: left;
+    padding-top: 35px;
+    padding-left: 40px;
+}
+#c{
+    float: left;
+    padding-top: 35px;
+    padding-left: 40px;
+}
+#p{
+    float: left;
+    padding-top: 35px;
+    padding-left: 60px;
+}
+.ref{
+    padding-top: 5rem;
+    padding: 0, 1rem;
+    text-align: center;
 }

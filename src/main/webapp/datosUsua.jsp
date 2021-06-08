@@ -23,18 +23,15 @@
     </head>
     <body>
     <header> 
-        <h1>SMOKELESS</h1>
+        <h1 id="sm">SMOKELESS</h1>
         <div class="contenido-header">
-        <a href="menu.html" id="menu">MENU</a>
-        <a href="proyecciones.html" id="pro" style="color: black;">PROYECTAR</a>
-        <a href="recomendaciones.html" id="rec" style="color: black;">RECOMENDACIONES</a>
-        <a href="login.html"></a></div></header>
-        <h1>Datos De Usuario</h1>
+        <a href="menuinicial.jsp" id="menu">MENU</a>
+        <a href="https://smokelesspy.herokuapp.com/home/<%=session.getAttribute("id")%>" id="pro">PROYECTAR</a>
+        <a href="cuestionarioDiario.html" id="cue">CUESTIONARIO</a>
+        <a href="index.html" id="sc">CERRAR</a></div></header>
+        <div class="titulo"><h1 id="dat">Datos De Usuario</h1></div>
         <br>
-        <div class="contenido-header">
-                    <header>
-            
-            <tbody>
+        <div class="content">
                 
                 <% 
                     Connection con = null;
@@ -52,7 +49,7 @@
                         con = DriverManager.getConnection(url, userName, password);
                         
                         try{
-                            String q = "select nombre, nacimiento,sexo ,eda from bdcrear WHERE id_usua='"+session.getAttribute("id")+"'";;
+                            String q = "select nombre,contrasena, nacimiento,sexo ,eda from bdcrear WHERE id_usua='"+session.getAttribute("id")+"'";;
                             
                             System.out.println(q);
                             
@@ -62,17 +59,32 @@
                             
                 %>
                  <form method="post" name="formularioregistro" action="actuuarios.jsp">
-                    <br> 
-                    <input type="text" value="<%=rs.getString("nombre") %>" name="name"  > 
-                    <input type="text" value="<%=rs.getString("nacimiento")%> " name="naci">
-                    <input type="text" value="<%=rs.getString("sexo")%> " name="sexo"> 
-                    <input type="text" value="<%=rs.getString("eda")%> " name="edad"> 
-                   
-                    <button  class="btn btn-info btn-block compra_boton-color" >Actualizar</button>
-                    <a href="borrarcuenta.jsp" style="color:black;">Eliminar mi cuenta</a>
-                 
+                     <table border="2">
+                         <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Contraseña</th>
+                                <th>Fecha de nacimiento</th>
+                                <th>Sexo</th>
+                                <th>Edad</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" value="<%=rs.getString("nombre") %>" name="name"></td>
+                                <td><input type="text" value="<%=rs.getString("contrasena") %>" name="con"></td>
+                                <td><input type="text" value="<%=rs.getString("nacimiento")%> " name="naci"></td>
+                                <td><input type="text" value="<%=rs.getString("sexo")%> " name="sexo"></td>
+                                <td><input type="text" value="<%=rs.getString("eda")%> " name="edad"></td>
+                                <td><button  class="btn btn-info btn-block compra_boton-color" >Actualizar</button></td>
+                                <td id="e2"><a href="borrarcuenta.jsp" id="e">Eliminar mi cuenta</a></td>
+                            </tr>    
+                        </tbody>
+                     </table>
                  </form>
-
+        </div>
                 <%     
                                 
                             }
@@ -80,13 +92,11 @@
                             set.close();
                         String idS = String.valueOf(session.getAttribute("id")); 
                         
-                            
-                        
                         }catch(SQLException ed){
                             System.out.println("Error al consultar la tabla");
                             System.out.println(ed.getMessage());
                             %>
-            </body>
+          
             <h1>Recurso no disponible solo juguito contigo UwU</h1>
                             <%
                         
@@ -104,13 +114,26 @@
                     }
                     
                     %>
-                
-            </body>
-        </table>
-                    <br>
-                  <a href='index.html?id=<%=session.getAttribute("id")%>ban=<%=session.getAttribute("ban")%>' >Regresar </a>
-                  <div class="contenido-header">
-                      </header>
-        </div>
+         
+        <br>
+        <a href='index.html?id=<%=session.getAttribute("id")%>ban=<%=session.getAttribute("ban")%>' >Regresar </a>
+        <br>
+        <div>
+        <footer>
+            Technology Innovation Space
+            <br>
+            Cedillo López Erick Omar
+            <br>
+            Granados Martínez Pablo Daniel
+            <br>
+            Jiménez Bernal Ernesto Amador
+            <br>
+            López Castillo Azurim Sua
+            <br>
+            Ugalde Tellez Aaron
+            <br>
+            Tellez de la Cruz Esaul
+        </footer>
+    </div>
     </body>
 </html>

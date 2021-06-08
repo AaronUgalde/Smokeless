@@ -21,6 +21,7 @@ a{
     
 }
 header{
+    word-spacing: 0;
     padding-top: .8rem;
     padding-left: 1.5rem;
     font-size: 90%;
@@ -66,7 +67,7 @@ footer{
     padding: 100px 0px;
     border-radius: 1%;
     width: 1000px;
-    height: 2750px;
+    height: max-content;
     line-height: 1.5 ;
     padding-top: .1rem;
     letter-spacing: 1px;
@@ -94,5 +95,5 @@ transform: translate(-0%,-50%);
         border:0;
         border-radius: 5%;
         width: 160px;
-        height: 22px
+        height: 22px;
     }

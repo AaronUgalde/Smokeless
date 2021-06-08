@@ -6,16 +6,10 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*, java.text.*, encapsulamiento.Crear, encapsulamiento.ConexionDB" %>
 <!DOCTYPE html>
-<link rel="stylesheet" href="./css/crear.css">
-<link rel="stylesheet" href="./css/hola.css">
+<link rel="stylesheet" href="./css/respuestsas.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
-<style type="text/css">
-  a:link {color:#ffffff;}
-  a:visited {color:#ffffff;}
-  a:active {color:#ffffff;}
-  a:hover {color:#ffffff;}
-  </style>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -24,9 +18,8 @@
     <body>
      <header> 
         <h1>SMOKELESS</h1>
-        <div class="contenido-header">
-        <a href="index.html" id="login">Inicia sesion</a>
-        </div></header>
+        </header>
+        <br>
         <% 
             Connection con = null;
             Statement set = null;
@@ -57,10 +50,11 @@
                     int registro = set.executeUpdate(q);
                     
                     %>
-        <divc class="container">          
-            <h1>Registro Exitoso</h1>            
-        </div>            
-            <%
+        <div class="content">
+        <h1>Registro Exitoso</h1> 
+        </div>     
+        <br>
+                    <%
                         set.close();
                 
                 }catch(SQLException ed){
@@ -83,7 +77,8 @@
             }
             %>
         
-        
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <a href="index.html" id="rm">Regresar al menú principal</a>
         
     </body>
 </html>
