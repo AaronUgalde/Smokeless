@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/crearusuario.css">
+    <link rel="stylesheet" href="./css/hola.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+    <style type="text/css">
+        a:link {color:#ffffff;}
+        a:visited {color:#ffffff;}
+        a:active {color:#ffffff;}
+        a:hover {color:#ffffff;}
+        </style>
+    <title>Registrar usuario</title>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="smoke"><h1>SMOKELESS</h1></div>
+            <div class="contenido-header">
+                    <a href="index.html" >INICIAR SESION</a>
+            </div>
+        </header>
+        <br>
+        <div class="register">
+            <div class="register-header">
+                <h1>REGÍSTRATE</h1>
+            </div>
+            <BR>
+            <br>
+            <br>
+              <div class="container" >
+            <div class="containerRegistro" >
+                <form method="post" name="formularioregistro" id="formularioregistro" action="crudcrear.jsp">
+                        <label for="name" class="formulario__label">Nombre:</label>
+                            <input type="text" class="form-control" name="name" id="name" required="" pattern="[a-zA-Z]+" minlength="1" maxlength="45" >
+                        <label for="contra" class="formulario__label">Contraseña:</label>
+                            <input type="text" class="form-control" name="contra" id="contra" required="" minlength="1" maxlength="45">
+                        <label for="nacimiento" class="formulario__label">Fecha de Nacimiento:</label>
+                            <input type="text" class="form-control" name="nacimiento" id="nacimiento" required=""  minlength="2" maxlength="45" >
+                        <label for="sexo" class="formulario__label">Sexo:</label>
+                            <input type="text" class="form-control" name="sexo" id="sexo" required=""  minlength="1" maxlength="45" >
+                        <label for="edad" class="formulario__label">Edad:</label>
+                            <input type="text" class="form-control" name="edad" id="edad" required=""  minlength="1" maxlength="45" >
+                            <br>
+                                                        <br>
+                            <br>
+                            <br>
+                            <br>
+
+                        <input  class='registrar'type="submit" value="Registrar">
+                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Registro exitoso!</p>
+                    </div>
+                    
+                 </form>
+
+            </div>
+        </div>
+        <br>
+        <div>
+            <footer>
+                Cedillo López Erick Omar
+                <br>
+                Granados Martínez Pablo Daniel
+                <br>
+                Jiménez Bernal Ernesto Amador
+                <br>
+                López Castillo Azurim Sua
+                <br>
+                Ugalde Tellez Aaron
+                <br>
+                Tellez de la Cruz Esaul
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

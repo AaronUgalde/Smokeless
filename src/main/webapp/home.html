@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/proyectar.css">
+    <link rel="stylesheet" href="./css/hola.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+<style type="text/css">
+  a:link {color:#ffffff;}
+  a:visited {color:#ffffff;}
+  a:active {color:#ffffff;}
+  a:hover {color:#ffffff;}
+  </style>
+    <title>Proyección y recomendaciones</title>
+</head>
+<body>
+    <header> 
+        <h1>SMOKELESS</h1>
+        <div class="contenido-header">
+            <a href="menuinicial.jsp" id="menu">MENU</a>
+            <a href="cuestionarioDiario.html" id="menu">CUESTIONARIO</a>
+            <a href="home.html" id="pro">PROYECTAR</a>
+            <a href="datosUsua.jsp" id="cam">CUENTA</a>
+            <a href="index.html">CERRAR</a></div></header>
+
+    <div class="proyectar"><h2>En cuanto tiempo te dara cancer de garganta</h2>
+    <li>{{ prediccionCG }}</li>
+    <h2>En cuanto tiempo te dara gangrena</h2>
+    <li>{{ prediccionG }}</li>
+    <h2>En cuanto tiempo te dara cancer de pulmon</h2>
+    <li>{{ prediccionCP }}</li>
+    <h2>En cuanto tiempo te dara cancer de higado</h2>
+    <li>{{ prediccionCH}}</li>
+    <h2>En cuanto tiempo te dara Asma</h2>
+    <li>{{ prediccionA }}</li>
+    <h2>Recomendacion</h2>
+    <li>{{ recomendacion }}</li>
+    {% for elem in graph %}
+        {{elem|safe}}
+    {% endfor %}
+    <div class="Enfermedades">
+        <h3> Cancer_De_garganta </h3><h3> Gangrena </h3><h3> Cancer_De_Pulmon 
+        </h3><h3> Cancer_De_Higado </h3><h3> Asma </h3></div>
+    </div>
+</body>
+</html>

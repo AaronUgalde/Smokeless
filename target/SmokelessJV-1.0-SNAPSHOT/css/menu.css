@@ -1,0 +1,56 @@
+*{
+   font-family: 'Assistant',sans-serif;
+}
+
+
+header{
+
+    background-image: url(./Grafico/Fondo.png);
+    color: rgb(255, 255, 255);
+	background-size: cover;
+    
+	height: 110px;
+    
+
+	width: 100%;
+    position:static;
+
+    background-repeat: no-repeat;
+}
+.contenido-header{
+    padding-top: .8rem;
+    padding-left: 1.5rem;
+    font-size: 90%;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+.container{
+    padding-top: 10rem;
+}
+
+footer{
+    background-color: rgb(82, 82, 82);
+    color: rgb(255, 255, 255);
+    transform: translate(0%,400%);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    line-height: 2;
+}
+
+.menu{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    margin-left: 35rem;
+    background-color: #D49CFF;
+    width: max-content;
+    height: 500px;
+    border-radius: 5%;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}

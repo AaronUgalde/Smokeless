@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="./css/hola.css">
+<link rel="stylesheet" href="./css/cuestionarioDiario.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+<style type="text/css">
+  a:link {color:#ffffff;}
+  a:visited {color:#ffffff;}
+  a:active {color:#ffffff;}
+  a:hover {color:#ffffff;}
+  </style>
+<html>
+    <head>
+        <title>Cuestionario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+         <div class="resolv">
+        <div class="resolv-form">
+          <br>
+          <div class="resolv-header">
+            <h1>SMOKELESS</h1>
+            <div class="contenido-header">
+              <a href="menuinicial.jsp" id="menu">MENU</a>
+              <a href="cuestionarioDiario.html" id="menu">CUESTIONARIO</a>
+              <a href="home.html" id="pro">PROYECTAR</a>
+              <a href="datosUsua.jsp" id="cam">CUENTA</a>
+              <a href="index.html">CERRAR</a></div></header>
+          </div>
+          <h2>CUESTIONARIO</h2>
+            <br>
+            <form name="cuestionario" action="cuestionarioDiario.jsp">
+              <center>
+             <label for="preg3">1. ¿Cuántos cigarros fuma a la semana?</label>
+              <select name="preg1" id="preg1">
+                <option value="0.14" required>1 a la semana</option>
+                <option value="0.42" required>3 a la semana</option>
+                <option value="1" required>1 paquete</option>
+                <option value="2" required>2 paquetes</option>
+                <option value="3" required>3 paquetes o mas</option>
+              </select>
+             <br><br>
+              <label for="preg9">2. ¿Con que frecuencia está usted expuesto al humo del tabaco?</label>
+              <select name="preg2" id="preg2">
+                <option value="4" required>Siempre</option>
+                <option value="3" required>Casi siempre</option>
+                <option value="2" required>Regularmente</option>
+                <option value="1" required>Casi nunca</option>
+                <option value="0" required>Nunca</option>
+              </select>
+              <br><br><br>
+               <label for="preg3">3. ¿Cuantas horas al dia está expuesto o expuesta al ambiente urbano?</label>
+              <select name="preg3" id="preg3">
+                <option value="0" required>Menos de una hora</option>
+                <option value="1" required>1-2 Horas</option>
+                <option value="3" required>3-4 Horas</option>
+                <option value="5" required>5-6 Horas</option>
+                <option value="6" required>6-10 Horas</option>
+                <option value="10" required>+10 Horas</option>
+              </select>
+               <p>4. ¿Cuanta cantidad de alcohol sueles ingerir a la semana?</p>
+                <input type="radio" name="preg4" value="0" id="A4" required><label for="A4">Nada</label><br>
+                <input type="radio" name="preg4" value="1" id="B4" required><label for="B4">1 trago(355 ml)</label><br>
+                <input type="radio" name="preg4" value="2" id="C4" required><label for="C4">2 tragos</label><br>
+                <input type="radio" name="preg4" value="4" id="D4" required><label for="D4">4 tragos</label><br>
+                <input type="radio" name="preg4" value="6" id="E4" required><label for="E4">6 tragos</label><br>
+                <input type="radio" name="preg4" value="10" id="F4" required><label for="F4">10 tragos o mas</label><br>
+              <br>
+              <br>
+              <p>5. ¿Que tipo de bebidas consume frecuentemente?</p>
+              <input type="checkbox" id="B1" name="preg5" value="Cerveza"><label for="B1">Cerveza</label><br>
+              <input type="checkbox" id="B2" name="preg5" value="Vino"><label for="B2">Vino</label><br>
+              <input type="checkbox" id="B3" name="preg5" value="Licor">
+              <label for="B3">Licor (Bebidas destiladas como whisky, ron, tequila, vodka, etc.</label><br>
+              <br><br>
+              
+               <label for="preg19">6. ¿Cuantas frutas consume al día?</label>
+              <select name="preg6" id="preg19">
+                <option value="0" >0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3 o más</option>
+              </select>
+              <p>7. ¿Tiene falta de suministro de sangre?</p>
+                <input type="radio" name="preg7" value="1" id="S12" required><label for="S12">Si</label><br>
+                <input type="radio" name="preg7" value="0" id="N12" required><label for="N12">No</label><br>
+              <br> 
+              <p>8. ¿Ingiere algun medicamento?</p>
+                <input type="radio" name="preg8" value="1" id="S8" required><label for="S8">Si</label><br>
+                <input type="radio" name="preg8" value="0" id="N8" required><label for="N8">No</label><br>
+              <br>
+               <p>9. ¿Ingiere algun droga?</p>
+                <input type="radio" name="preg9" value="1" id="S14" required><label for="S14">Si</label><br>
+                <input type="radio" name="preg9" value="0" id="N14" required><label for="N14">No</label><br>
+              <br>
+                  <input class=" Enviar" type="submit" value="Enviar"></center>
+            </form>
+            
+        </div>
+      <br>
+    <div>
+    <div>
+        <footer>
+            Cedillo López Erick Omar
+            <br>
+            Granados Martínez Pablo Daniel
+            <br>
+            Jiménez Bernal Ernesto Amador
+            <br>
+            López Castillo Azurim Sua
+            <br>
+            Ugalde Tellez Aaron
+            <br>
+            Tellez de la Cruz Esaul
+        </footer>
+    </div>
+    </body>
+</html>
