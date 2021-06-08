@@ -50,6 +50,10 @@
                             rs1 = set.executeQuery(q1);
                             
                             String idS = String.valueOf(session.getAttribute("id")); 
+                            String id = String.valueOf(session.getAttribute("id"));
+                            Cookie miCookie = new Cookie ("id",id); 
+                            miCookie.setMaxAge(120);
+                            response.addCookie(miCookie);
                        
                         
                                 if(rs1.isBeforeFirst() && idS!=null)
@@ -59,7 +63,6 @@
                                 else   
                                 {  
                                     
-                                   
 
                                     response.sendRedirect("cuestionario.html"); 
                                      

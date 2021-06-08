@@ -19,13 +19,17 @@
         </head>
     <body>
         <div class="contenido-header">
-                    <header>
-
-            <a href="datosUsua.jsp"><h1>Cambia Tus Datos Ahora</h1></a>
-            <a href="cuestionarioDiario.html"><h1>Contestar cuestionario diario</h1></a>
-            <a href="https://smokelesspy.herokuapp.com/home/<%=session.getAttribute("id")%>" style="color:black;">Hacer Tu prediccion </a>
-                    </header>
-
+            <header>                        
+                <a href="datosUsua.jsp"><h1>Cambia Tus Datos Ahora</h1></a>
+                <a href="cuestionarioDiario.html"><h1>Contestar cuestionario diario</h1></a>
+                <a href="https://smokelesspy.herokuapp.com/home/<%=session.getAttribute("id")%>" style="color:black;">Hacer Tu prediccion </a>
+                <%
+                    Cookie[] cookies = request.getCookies();
+                    for (int i = 0; i < cookies.length; i++)
+                        if (cookies[i].getName().equals("id"))
+                            session.setAttribute("id",cookies[i].getValue());
+                %>
+            </header>
         </div>
     </body>
 </html>
