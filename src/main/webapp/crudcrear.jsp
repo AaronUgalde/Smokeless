@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*, java.text.*, encapsulamiento.Crear, encapsulamiento.ConexionDB" %>
 <!DOCTYPE html>
-<link rel="stylesheet" href="./css/actualizar.css">
+<link rel="stylesheet" href="./css/crear.css">
 <link rel="stylesheet" href="./css/hola.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
@@ -25,10 +25,8 @@
      <header> 
         <h1>SMOKELESS</h1>
         <div class="contenido-header">
-        <a href="menu.html" id="menu">MENU</a>
-        <a href="proyecciones.html" id="pro">PROYECTAR</a>
-        <a href="recomendaciones.html" id="rec">RECOMENDACIONES</a>
-        <a href="login.html"></a></div></header>
+        <a href="index.html" id="login">Inicia sesion</a>
+        </div></header>
         <% 
             Connection con = null;
             Statement set = null;
@@ -59,8 +57,10 @@
                     int registro = set.executeUpdate(q);
                     
                     %>
-        <h1>Registro Exitoso</h1>            
-                    <%
+        <divc class="container">          
+            <h1>Registro Exitoso</h1>            
+        </div>            
+            <%
                         set.close();
                 
                 }catch(SQLException ed){
@@ -84,7 +84,6 @@
             %>
         
         
-            <a href="index.html" >Regresar al menú principal</a>
         
     </body>
 </html>
